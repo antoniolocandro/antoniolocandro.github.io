@@ -1,9 +1,12 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2013-06-22 11:48:10
+title: "Welcome to Jekyll!"
+date: 2013-06-22T11:48:10.000Z
 categories: jekyll update
+published: true
 ---
+
+Antonio Locandro
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
