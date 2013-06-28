@@ -5,8 +5,9 @@ date: 2013-06-22T11:48:10.000Z
 categories: jekyll update
 published: true
 ---
+So I decided to learn how to make static websites with `jekyll`, this will be my personal blog
 
-Antonio Locandro
+`Antonio Locandro` I have decided to keep the original post as reference
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
