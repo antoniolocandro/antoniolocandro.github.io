@@ -18,7 +18,7 @@ Using Expression Labeling:
 5. if you expand the available options **fields and values** you will see the fields and attributes your data has for this blog post the sample layer has 4 fields
 
 
-|fields     |
+|   fields  |
 |: ------- :|
 |latitude   |
 |longitude  |
@@ -66,7 +66,8 @@ Now the expression will look
 ```
     'longitude ' ||  "longitude"  || '\n' ||'latitude ' ||   "latitude" 
 ```
-![screenshot]([{{site.url}}/assets/QGIS/expression-labelling-QGIS-4.jpg)
+
+![screenshot](antoniolocandro.github.io/assets/QGIS/expression-labelling-QGIS-4.jpg)
 
 ***
 **In summary**
