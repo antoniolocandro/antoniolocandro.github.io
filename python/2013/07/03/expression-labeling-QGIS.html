@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>expression labelling QGIS</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">Aviation, GIS and Open Source</a></h1>
+              <a class="extra" href="index.html">home</a>
+			  <a class="extra" href="blog.html"/">blog</a>
+            </div>
+
+                <h2>expression labelling QGIS</h2>
+<p class="meta">03 Jul 2013</p>
+
+<div class="post">
+<p><a href='http://www.qgis.org'>QGIS</a> is a very nice GIS open source software that I have been playing a lot lately. I think it is getting really good specially the new development version QGIS 2.0. Everyday I use <a href='http://esri.com'>ARCGIS</a> Advanced 10.0 at work and when I switch to fool around with QGIS I try to do some things that I would normally do with ARCGIS.</p>
+
+<p>One of those things is <strong>expression labelling</strong>, it´s one of those features that I use a lot at work and wanted to try out with QGIS 2.0 aka <strong>QGIS-master</strong>.</p>
+
+<p>Using Expression Labeling:</p>
+
+<ol>
+<li>Select the layer you want to label</li>
+
+<li>Right click on the layer and select properties, now the property dialog will open</li>
+
+<li>Select from the <strong>left option</strong> labels; please make the world a favour and don&#8217;t use deprecated labels (for some reason QGIS developers chose to keep them when someone upgrades from QGIS 1.8 to QGIS 2.0. Honestly it would be better to just eliminate that since this will only make the support for old labeling for ever</li>
+
+<li>tick the option label this layer with the epsilon symbol &amp;epsilon: a new dialog window will open with lots of options but for this blog post lets just use <strong>fields and values</strong></li>
+
+<li>if you expand the available options <strong>fields and values</strong> you will see the fields and attributes your data has for this blog post the sample layer has 4 fields</li>
+</ol>
+<table><thead><tr><th>fields</th></tr></thead><tbody><tr><td style='text-align: center;'>latitude</td>
+</tr><tr><td style='text-align: center;'>longitude</td>
+</tr><tr><td style='text-align: center;'>x</td>
+</tr><tr><td style='text-align: center;'>y</td>
+</tr></tbody></table>
+<p>Now some examples!</p>
+
+<p><strong>Adding just one field</strong></p>
+
+<p>double click on the field you want to use, lets say <code>longitude</code></p>
+
+<p>Now the expression will look</p>
+
+<p><code>
+     &quot;longitude&quot; 
+</code></p>
+
+<p><strong>Concatenating two fields</strong></p>
+
+<p>double click on the first field, then add <code>||</code>(you can either use your keyboard or double click the symbol on the expression dialog) then double click con the second field you want to add</p>
+
+<p>Now the expression will look</p>
+
+<p><code>
+	 &quot;longitude&quot;  ||  &quot;latitude&quot; 
+</code></p>
+
+<p><strong>Having two fields each on a different line</strong></p>
+
+<p>repeat the steps before but now you will add &#8216;\n&#8217; after the first <code>||</code> and then add <code>||</code></p>
+
+<p>Now the expression will look</p>
+
+<p><code>
+     &quot;longitude&quot;  ||+&#39;\n&#39;||  &quot;latitude&quot; 
+</code></p>
+
+<p><strong>Adding some explanatory text now</strong></p>
+
+<p>repeat the steps before but now add the text inside single quotes <code>&#39;</code></p>
+
+<p>Now the expression will look</p>
+
+<p><code>
+    &#39;longitude &#39; ||  &quot;longitude&quot;  || &#39;\n&#39; ||&#39;latitude &#39; ||   &quot;latitude&quot; 
+</code> <img alt='screenshot' src='[/assets/QGIS/expression-labelling-QGIS-4.jpg' /></p>
+<hr />
+<p><strong>In summary</strong></p>
+
+<p><code>||</code> concatenates</p>
+
+<p><code>&#39;\n&#39;</code> equals a new line</p>
+
+<p><code>&quot;Longitude&quot;</code> will return the values in the Longitude field, notice the double quotes</p>
+
+<p><code>&#39;Longitude&#39;</code> will just return the string Longitude, notice the single quotes</p>
+<hr />
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Antonio Locandro<br />
+                  GIS Specialist & Aviation Consultant<br />
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/antoniolocandro/">github.com/antoniolocandro</a><br />
+                  <a href="http://twitter.com/antoniolocandro/">twitter.com/antoniolocandro</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>
