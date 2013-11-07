@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "expression labelling QGIS"
-date:   2013-07-3 15:48:10
+title: expression labelling QGIS
+date: {}
 categories: python
+published: true
 ---
 
 [QGIS][qgis_link] is a very nice GIS open source software that I have been playing a lot lately. I think it is getting really good specially the new development version QGIS 2.0. Everyday I use [ARCGIS] [esri] Advanced 10.0 at work and when I switch to fool around with QGIS I try to do some things that I would normally do with ARCGIS.
@@ -67,7 +68,7 @@ Now the expression will look
     'longitude ' ||  "longitude"  || '\n' ||'latitude ' ||   "latitude" 
 ```
 
-![screenshot](antoniolocandro.github.io/assets/QGIS/expression-labelling-QGIS-4.jpg)
+![screenshot](/assets/QGIS/expression-labelling-QGIS-4.jpg)
 
 ***
 **In summary**
