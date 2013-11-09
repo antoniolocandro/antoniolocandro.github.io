@@ -10,8 +10,8 @@
 
 	<style>
 		#map {
-			width: 800px;
-			height: 500px;
+			width: 100%;
+			height: 100%;
 		}
 
 		.info {
@@ -52,7 +52,45 @@
 var map = L.map('map').setView([15,-86],7);
 L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png').addTo(map);
 
-var steets = new L.geoJson(pobHND2001, {
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+    }
+}
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+}
+
+
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
+}
+
+
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.DEPTO) {
+        layer.bindPopup(feature.properties.DEPTO);
+    }
+}
+
+var geojson = new L.geoJson(pobHND2001, {onEachFeature: onEachFeature
         //some options
     }).addTo(map);
 
